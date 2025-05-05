@@ -1,0 +1,74 @@
+[
+  {
+    "key": "initial_extraction_json",
+    "title": "🎯 Initial Extraction",
+    "prompt_text": "Extract the following key details from the job posting. Return ONLY a valid JSON object as described, with no surrounding text or markdown:\n{\n  \"title\": \"Job title\",\n  \"level\": \"Seniority level\",\n  \"location\": \"Location\",\n  \"work_model\": \"Remote/Hybrid/Onsite\",\n  \"clearance\": \"Required clearance level\",\n  \"experience\": \"Years of experience required\",\n  \"education\": \"Required education\",\n  \"company\": \"Company name\"\n}",
+    "expected_format": "json"
+  },
+  {
+    "key": "job_title_analysis_json",
+    "title": "💼 Job Title Analysis",
+    "prompt_text": "Analyze the job title and role. Return ONLY a valid JSON object as described, with no surrounding text or markdown:\n{\n  \"standard_titles\": [\"List of equivalent industry titles\"],\n  \"seniority\": \"Seniority level analysis\",\n  \"domain\": \"Industry/domain\",\n  \"market_demand\": \"Current market demand\"\n}",
+    "expected_format": "json"
+  },
+  {
+    "key": "location_analysis_json",
+    "title": "📍 Location Analysis",
+    "prompt_text": "Analyze the location details. Return ONLY a valid JSON object as described, with no surrounding text or markdown:\n{\n  \"market\": {\n    \"tech_presence\": \"Industry presence details\",\n    \"major_employers\": [\"List of major employers\"],\n    \"area_type\": \"Business district type\"\n  },\n  \"economic\": {\n    \"cost_of_living\": \"Cost of living details\",\n    \"salary_competitiveness\": \"Salary market position\"\n  },\n  \"environment\": {\n    \"commute\": \"Transportation analysis\",\n    \"work_model\": \"Remote/hybrid trends\",\n    \"amenities\": [\"List of key amenities\"]\n  }\n}",
+    "expected_format": "json"
+  },
+  {
+    "key": "compensation_analysis_json",
+    "title": "💰 Compensation Analysis",
+    "prompt_text": "Extract and analyze the compensation and benefits information. Return ONLY a valid JSON object as described, with no surrounding text or markdown:\n{\n \"salary_range\": {\"min\": \"Minimum salary\", \"max\": \"Maximum salary\", \"currency\": \"Currency\", \"period\": \"Hourly/Annual\"},\n \"benefits\": [\"List of key benefits\"]\n}",
+    "expected_format": "json"
+  },
+  {
+    "key": "skills_analysis_json",
+    "title": "🔧 Skills Analysis",
+    "prompt_text": "Analyze required skills. Return ONLY a valid JSON object as described, no explanation or other text:\n{\n  \"technical\": {\n    \"required\": [\"List of required technical skills\"],\n    \"preferred\": [\"List of preferred technical skills\"],\n    \"certifications\": [\"Required certifications\"]\n  },\n  \"soft_skills\": [\"List of required soft skills\"]\n}",
+    "expected_format": "json"
+  },
+  {
+    "key": "tools_technologies_json",
+    "title": "🛠️ Tools and Technologies",
+    "prompt_text": "List the specific tools, technologies, platforms, and frameworks mentioned in the job description. Return ONLY a valid JSON object with this structure, no explanation or other text:\n{\n  \"tools\": [\"List of required tools/technologies\"]\n}",
+    "expected_format": "json"
+  },
+  {
+    "key": "development_growth_json",
+    "title": "🌱 Development & Growth",
+    "prompt_text": "Analyze opportunities for professional development and career growth mentioned in the job posting. Return ONLY a valid JSON object with this structure, no explanation or other text:\n{\n \"development_paths\": [\"Suggested learning paths\"],\n \"growth_opportunities\": [\"Career growth paths\"]\n}",
+    "expected_format": "json"
+  },
+  {
+    "key": "company_analysis_json",
+    "title": "🏢 Company Analysis",
+    "prompt_text": "Analyze the company information provided or implied. Return ONLY a valid JSON object as described, no explanation or other text:\n{\n  \"overview\": {\n    \"size\": \"Company size\",\n    \"industry\": \"Industry focus\",\n    \"stage\": \"Company stage/maturity\"\n  },\n  \"culture\": {\n    \"values\": [\"Company values\"],\n    \"environment\": \"Work environment\"\n  },\n   \"growth_trajectory\": \"Company growth outlook\"\n}",
+    "expected_format": "json"
+  },
+  {
+    "key": "job_summary_markdown",
+    "title": "📄 Job Summary",
+    "prompt_text": "Generate a concise 1-2 paragraph summary of the job posting in markdown format. Highlight the role title, seniority, location, work model, company name, industry, and key responsibilities/skills.",
+    "expected_format": "markdown"
+  },
+  {
+    "key": "comprehensive_report_markdown",
+    "title": "📚 Comprehensive Analysis Report",
+    "prompt_text": "Generate a detailed 2-3 page comprehensive analysis report for the following job posting. Structure it with clear formatting using markdown headings, bullet points, and bold text for key information:\n\n# 📋 EXECUTIVE SUMMARY\nBrief overview of the position and key highlights\n\n## 🏢 COMPANY PROFILE & ANALYSIS\n- **Company Overview & Market Position**: Provide concise details about the company's size, industry position, and market relevance\n- **Industry Context & Competitive Landscape**: Analyze the industry environment and key competitors\n- **Company Culture & Work Environment**: Describe the workplace culture and environment based on available information\n- **Growth Trajectory & Future Outlook**: Assess the company's growth potential and future direction\n\n## 💼 POSITION ANALYSIS\n- **Role Overview & Responsibilities**: Clearly outline the core responsibilities and day-to-day activities\n- **Required Technical Skills & Competencies**: \n  * List each key technical skill with brief explanation of its importance\n  * Highlight critical vs. nice-to-have skills\n- **Experience & Educational Requirements**: Detail the specific experience and education needed\n- **Career Growth & Advancement Opportunities**: Describe potential career paths and growth opportunities\n\n## 💰 COMPENSATION & BENEFITS\n- **Salary Analysis & Market Comparison**: Compare the offered salary to market rates\n- **Benefits Package Assessment**: Evaluate the benefits package comprehensively\n- **Total Compensation Value Proposition**: Analyze the overall value of the complete package\n\n## 📍 LOCATION & WORKPLACE ANALYSIS\n- **Geographic Considerations**: Analyze the location's advantages and challenges\n- **Workplace Model (Remote/Hybrid/Onsite)**: Evaluate the working model and its implications\n- **Local Market Dynamics**: Assess the local job market conditions\n- **Cost of Living Considerations**: Analyze how location affects compensation value\n\n## ⚖️ OPPORTUNITY ASSESSMENT\n- **Key Advantages**: \n  * **Highlight each major advantage in bold**\n  * Provide brief explanation of why each is valuable\n- **Potential Challenges**: \n  * **Highlight each challenge in bold**\n  * Offer context for each challenge\n- **Growth Potential**: Assess long-term career growth opportunities\n- **Strategic Considerations**: Provide strategic insights for decision-making\n\n## 🎯 RECOMMENDATIONS & ACTION ITEMS\n- **Key Decision Factors**: \n  * **Bold each critical decision factor**\n  * Explain its importance and implications\n- **Preparation Steps**: Outline specific actions to prepare for application/interview\n- **Application Strategy**: Provide tactical advice for the application process\n- **Negotiation Considerations**: Offer guidance on negotiation strategy\n\nMake the report visually structured, easy to scan, data-rich, actionable, and highly informative. Use bold text for key points, bullet points for lists, and clear headings for sections.",
+    "expected_format": "markdown"
+  },
+  {
+    "key": "resume_analysis_json",
+    "title": "📄 Resume Analysis",
+    "prompt_text": "Analyze the following resume text. Return ONLY a valid JSON object with this exact structure, no explanation or other text:\n{\n  \"professional_summary\": \"Brief overview of candidate's profile\",\n  \"contact\": {\n    \"name\": \"Full name\",\n    \"email\": \"Email address\",\n    \"phone\": \"Phone number\",\n    \"location\": \"City, State\"\n  },\n  \"experience\": [\n    {\n      \"title\": \"Job title\",\n      \"company\": \"Company name\",\n      \"location\": \"Location\",\n      \"dates\": \"Employment dates\",\n      \"highlights\": [\"Key achievements and responsibilities\"]\n    }\n  ],\n  \"education\": [\n    {\n      \"degree\": \"Degree name\",\n      \"institution\": \"School name\",\n      \"location\": \"Location\",\n      \"graduation_date\": \"Date\"\n    }\n  ],\n  \"skills\": {\n    \"technical\": [\"List of technical skills\"],\n    \"soft_skills\": [\"List of soft skills\"]\n  },\n  \"certifications\": [\"List of certifications\"],\n  \"clearance\": \"Security clearance level if mentioned\"\n}",
+    "expected_format": "json"
+  },
+  {
+    "key": "job_match_json",
+    "title": "📊 Job Match Analysis",
+    "prompt_text": "Compare the provided Resume Analysis (JSON) with the Job Analysis (JSON) and return ONLY a valid JSON object with this exact structure:\n{\n  \"overall_match_score\": 85,\n  \"detailed_scores\": {\n    \"skills_match\": 90,\n    \"experience_match\": 85,\n    \"education_match\": 80,\n    \"clearance_match\": 100\n  },\n  \"strengths\": [\n    \"Detailed strength points that align with job requirements\"\n  ],\n  \"gaps\": [\n    \"Specific areas where the candidate could improve\"\n  ],\n  \"recommendations\": \"Detailed, actionable recommendations for the candidate to improve their match\"\n}",
+    "expected_format": "json"
+  }
+]
